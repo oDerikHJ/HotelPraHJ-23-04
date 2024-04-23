@@ -1,4 +1,5 @@
 import 'package:dio/dio.dart';
+import 'package:hotel_pra_hoje/src/core/utilities/helpers/http/http_failure.dart';
 import 'http_response.dart';
 
 abstract interface class IHttp {
@@ -38,4 +39,6 @@ abstract interface class IHttp {
     String? baseUrl,
     Options? options,
   });
+
+  HttpFailure handleError(Object e);
 }

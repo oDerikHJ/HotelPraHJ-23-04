@@ -8,9 +8,9 @@ class AppConfiguration {
     SystemChrome.setPreferredOrientations([DeviceOrientation.portraitUp]);
 
     if (kDebugMode) {
-      kBaseUrl = 'endpoint-local && homologação';
+      kBaseUrl = 'https://teste.teste/'; //! endpoint-local && homologação
     } else {
-      kBaseUrl = 'endpoint-produção';
+      kBaseUrl = 'https://teste.teste/'; //! endpoint-produção
     }
   }
 }

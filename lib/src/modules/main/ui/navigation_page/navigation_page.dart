@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_modular/flutter_modular.dart';
+import 'package:hotel_pra_hoje/src/core/app/theme/app_colors.dart';
+import 'package:hotel_pra_hoje/src/core/app/theme/app_style_manager.dart';
+import 'package:hotel_pra_hoje/src/core/utilities/helpers/responsive.dart';
 
 class NavigationPage extends StatefulWidget {
   const NavigationPage({super.key});
@@ -9,7 +12,7 @@ class NavigationPage extends StatefulWidget {
 }
 
 class _NavigationPageState extends State<NavigationPage> {
-   int _indexSelected = 0;
+  int _indexSelected = 0;
 
   void _onItemTapped(int index) {
     switch (index) {
@@ -39,14 +42,15 @@ class _NavigationPageState extends State<NavigationPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: AppColors.backgroundScaffold,
       appBar: AppBar(
-        backgroundColor: Theme.of(context).colorScheme.primary,
-        title: const Text('Hotel pra hoje'),
+        backgroundColor: AppColors.backgroundNavigationBar,
+        title: Text('Hotel pra hoje', style: getBoldStyle(color: AppColors.white, fontSize: 26.sp)),
       ),
       body: const RouterOutlet(),
       bottomNavigationBar: BottomNavigationBar(
         type: BottomNavigationBarType.fixed,
-        backgroundColor: Theme.of(context).colorScheme.primary,
+        backgroundColor: AppColors.backgroundNavigationBar,
         currentIndex: _indexSelected,
         selectedItemColor: Colors.green,
         unselectedItemColor: Colors.white,

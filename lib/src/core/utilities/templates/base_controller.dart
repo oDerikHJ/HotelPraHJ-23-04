@@ -2,6 +2,7 @@
 
 import 'package:flutter/widgets.dart';
 
+//* Classe para gerenciar estado da tela
 abstract class BaseController<T> extends ValueNotifier<T> {
   BaseController(T value) : super(value);
   T get currentState => value;
