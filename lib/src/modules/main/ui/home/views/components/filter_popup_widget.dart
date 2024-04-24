@@ -15,6 +15,8 @@ class _FilterPopupState extends State<FilterPopup> {
   final List<String> _selectedPropertyTypes = [];
   final List<String> _selectedOffersTypes = [];
 
+  // teste
+
   @override
   Widget build(BuildContext context) {
     return Dialog(
